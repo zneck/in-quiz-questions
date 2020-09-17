@@ -283,3 +283,93 @@ NOT SURE THE QUESTION IS CORRECT. Logical, physical and normalised are all produ
 - [ ] it stops and notifies the server administrator that the upgrade cannot complete until the incompatibility issue are resolved.
 - [ ] it provides a full report of the table specifications and the incompatibilities to the server administrator.
 - [ ] it performs a table check and, if problems are found, displays the information for the server administrator to take action.
+
+#### Q38. What is the advantage of using a temporary table instead of a heap table? 
+- [ ] Creating a temporary table does not require any special privileges.
+- [ ] The temporary table will be dropped when the database is restarted.
+- [x] The temporary table will be dropped as soon as your session disconnects.
+- [ ] Temporary table can be shared among clients, which makes them more usable in group development environments.
+
+#### Q39. A common table expression (CTE) is a named ____ that exist within the scope of a single statement and that can be reffered to later  within that statement. 
+- [ ] subquery.
+- [x] temporary result set.
+- [ ] function.
+- [ ] recursive statement.
+
+#### Q40. In which table does MySQL stores passwords for user accounts. 
+- [ ] mysql.passwords.
+- [x] mysql.user.
+- [ ] mysql.accounts.
+- [ ] mysql.admin.
+
+#### Q41. You need to export the data in the customers table into a CSV file. What is the best way to accomplish this, assuming that the secure_file_priv option has been enabled?
+- [ ] `-`
+```
+    1 SELECT *
+    2 FROM customers 
+    3 INTO 'C:/tmp/customers.csv'
+    4 FIELDS ENCLOSED BY ' '' '
+    5 TERMINATED BY ' ; ' 
+    6 ESCAPED BY ' '' ' 
+    7 LINES TERMINATED BY '/r/n';
+```
+- [ ] `-`
+```
+    1 SELECT *
+    2 FROM customers 
+    3 INTO OUTFILE 'C:/tmp/customers.csv'
+    4 FIELDS ESCAPED BY ' '' '
+    5 TERMINATED BY ' ; ' 
+    6 ENCLOSED BY ' '' ' 
+    7 LINES TERMINATED BY '/r/n';
+```
+- [ ] `-`
+```
+    1 SELECT *
+    2 FROM customers 
+    3 INTO 'C:/tmp/customers.csv'
+    4 FIELDS ENCLOSED BY ' '' '
+    5 FIELDS TERMINATED BY ' ; ' 
+    6 FIELDS ESCAPED BY ' '' ' 
+    7 LINES TERMINATED BY '/r/n';
+```
+- [x] `-`
+```
+    1 SELECT *
+    2 FROM customers 
+    3 INTO OUTFILE 'C:/tmp/customers.csv'
+    4 FIELDS ENCLOSED BY ' '' '
+    5 TERMINATED BY ' ; ' 
+    6 ESCAPED BY ' '' ' 
+    7 LINES TERMINATED BY '/r/n';
+```
+
+#### Q42. A powerful method of programming with stored procedures is to use a cursor. This allows you to iterate a set of rows returned by a query and process each row accordingly. When working with MySQL cursor, what must you also declare?
+- [x] NOT FOUND handler
+- [ ] DEFAULT value
+- [ ] SQLEXCEPTION routine
+- [ ] RETURN variable
+
+#### Q43. You need to make an exact copy of a table, with the columns, indexes, and data all intact. Which command can be used to find out information about the table you wish to copy?
+- [ ] CLONE TABLE
+- [ ] CREATE TABLE
+- [x] SHOW CREATE TABLE
+- [ ] INSERT INTO
+
+#### Q44. Which command exits your current MySQL session?
+- [ ] END
+- [x] QUIT
+- [ ] EXIT
+- [ ] STOP
+
+#### Q45. What is a limitation of MySQL Workbench?
+- [ ] ease of use for creating and editing database objects
+- [ ] must be downloaded and installed on a local machine
+- [x] level of access to server information
+- [ ] availability of tools for database migration
+
+#### Q46. Which method results in the best performance for doing a bulk insert into a MySQL database?
+- [ ] LOAD DATA LOCAL INFILE
+- [x] LOAD DATA INFILE
+- [ ] MySQL Workbench Import Wizard
+- [ ] extended INSERT statement
